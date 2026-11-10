@@ -1,0 +1,23 @@
+{
+  "name": "m-prediction-circuits",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build:private": "node private/build.mjs compile",
+    "fetch:private-ptau": "node private/fetch-ptau.mjs",
+    "setup:private": "node private/build.mjs all",
+    "package:private": "node private/build.mjs package",
+    "prepare:mainnet": "node private/prepare-mainnet.mjs",
+    "test:prepare-mainnet": "node private/test-prepare-mainnet.mjs",
+    "test:private-artifacts": "node private/test.mjs",
+    "test:shielded-vault": "node ../contracts/shielded-collateral-vault/circuits/test/run.mjs"
+  },
+  "overrides": {
+    "bfj": "7.0.2"
+  },
+  "dependencies": {
+    "@zkpassport/poseidon2": "0.6.2",
+    "circomlib": "^2.0.5",
+    "snarkjs": "^0.7.5"
+  }
+}
